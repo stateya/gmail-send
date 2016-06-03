@@ -4,7 +4,7 @@ Description=Gmail send command
 
 [Service]
 Type=oneshot
-ExecStart=docker run --rm \
+ExecStart=/usr/bin/docker run --rm \
             -e GMAIL=$GMAIL \
             -e TO=$TO \
             -e SENDER=$SENDER \
