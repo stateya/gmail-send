@@ -1,0 +1,18 @@
+# systemd で使うとき
+[Unit]
+Description=Gmail send command
+
+[Service]
+Type=oneshot
+ExecStart=docker run --rm \
+            -e GMAIL=$GMAIL \
+            -e TO=$TO \
+            -e SENDER=$SENDER \
+            -e GMAIL_PASSWORD=$GMAIL_PASSWORD \
+            -e SUBJECT="<タイトル>" \
+            -e BODY="<内容>" \
+              gmail-send
+EnvironmentFile=/etc/gmail-send.env
+
+[Install]
+WantedBy=multi-user.target
