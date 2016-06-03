@@ -11,7 +11,7 @@ ExecStart=docker run --rm \
             -e GMAIL_PASSWORD=$GMAIL_PASSWORD \
             -e SUBJECT="<タイトル>" \
             -e BODY="<内容>" \
-              gmail-send
+              stateya/gmail-send
 EnvironmentFile=/etc/gmail-send.env
 
 [Install]
