@@ -11,7 +11,7 @@ docker run --rm \
   -e GMAIL_PASSWORD=<Gmailパスワード> \
   -e SUBJECT="<タイトル>" \
   -e BODY="<内容>" \
-    gmail-send
+    stateya/gmail-send
 ```
 
 
@@ -21,10 +21,13 @@ alpine Linux を使っている為、Image のサイズは 47.56 MBになって�
 ## Gmail アカウントで"安全性の低いアプリの許可"をして下さい
 
 ログインとセキュリティ
+
 https://myaccount.google.com/security
 
 から"安全性の低いアプリの許可"で許可する
 
 ## 使っているメールコマンド
+
 Swaks - Swiss Army Knife for SMTP
+
 http://www.jetmore.org/john/code/swaks/
